@@ -1,0 +1,305 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('./imagenes/Fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+}
+/* Fondo para el contenedor inicial */
+#contenedor-inicial {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el contenedor en la pantalla */
+    width: 90%; /* Aumenta el ancho */
+    max-width: 800px; /* Ajusta el ancho máximo */
+    height: 105%; /* Aumenta la altura */
+    max-height: 600px; /* Ajusta la altura máxima */
+    background-image: url("./imagenes/CONTENEDOR-INICIAL.jpg"); /* Imagen de fondo */
+    background-size: contain; /* Ajusta la imagen para que se vea completa */
+    background-repeat: no-repeat; /* Evita que se repita la imagen */
+    background-position: center; /* Centra la imagen en el contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+}
+/* Contenido del formulario */
+#nombreFormulario {
+    text-align: center;
+    padding: 40px 25px; /* Aumenta el padding superior e inferior */
+    border-radius: 5px;
+    margin: 120px auto; /* Ajusta el margen superior e inferior */
+    max-width: 500px; /* Ancho máximo del formulario */
+    width: 90%; /* Ancho relativo para adaptarse a pantallas pequeñas */
+}
+/* Título */
+#nombreFormulario h1 {
+    color: #ff9d00;
+    font-size: 28px;
+    
+}
+/* Campo de entrada */
+#nombreInput {
+    width: calc(100% - 40px); /* Reduce el ancho para respetar el padding interno */
+    max-width: 400px; /* Limita el ancho máximo del input */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+#nombreInput:focus {
+    border-color: #ff9d00;
+    outline: none;
+}
+
+/* Botón de introducir nombre */
+#introducirNombreBtn {
+    background-color: #ff9d00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#introducirNombreBtn:hover {
+    background-color: #e68a00;
+}
+
+#introducirNombreBtn:active {
+    transform: scale(0.95);
+}
+
+/* Mensaje de bienvenida */
+#mensajeBienvenida {
+    font-size: 24px;
+    color: #ff9d00;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Botón de jugar */
+#jugarBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#jugarBtn:hover {
+    background-color: #45a049;
+}
+
+#jugarBtn:active {
+    transform: scale(0.95);
+}
+
+/* Tesoro */
+.tesoro {
+    background-image: url('./imagenes/_b019aba7-5c13-44a8-a4af-92fedd62327c-removebg-preview.png');
+    background-size: cover;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+}
+
+/* Héroe activo */
+.heroe {
+    background-image: url('./imagenes/topo-activo.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+/* Héroe inactivo */
+.heroe-inactivo {
+    background-image: url('./imagenes/topo-inactivo.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+/* Resaltado de celdas */
+.resaltar {
+    background-color: red !important; 
+}
+
+.contenedor-tablero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    position: center;
+    border: 1px solid #3e2a47; /* Borde marrón oscuro entre las celdas */
+}
+/* Suelo (fondo de la celda) */
+.suelo {
+    background-color: bisque;
+    z-index: 1;
+}
+/* Contenedor para el dado y su botón */
+.contenedor-dado {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-top: 20px;
+}
+
+/* Dado */
+#dado {
+    font-size: 80px;
+    font-weight: bold;
+    margin-right: 20px; /* Espacio entre el dado y el botón */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #ac811a;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Botón */
+button {
+    padding: 20px 40px;
+    background-color: #ff9d00;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+button:hover {
+    background-color: #45a049;
+}
+#recordActual {
+    background-color: #f0f0f0; /* Fondo de color gris claro */
+    color: #333; /* Color del texto */
+    font-size: 24px; /* Tamaño del texto */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 300px; /* Ancho del div */
+    margin: 20px auto; /* Centrado horizontal con margen superior */
+    text-align: center; /* Centrar el texto dentro del div */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-family: 'Arial', sans-serif; /* Fuente de texto */
+}
+
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    /* Para pantallas de tabletas y móviles */
+    #contenedor-inicial {
+        width: 95%;
+        height: auto;
+        padding: 15px;
+    }
+
+    #nombreFormulario {
+        padding: 50px 20px;
+        margin: 80px auto;
+    }
+
+    #dado {
+        font-size: 60px;
+        width: 80px;
+        height: 80px;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+    #jugarBtn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    #recordActual {
+        width: 90%;
+        font-size: 20px;
+        padding: 15px;
+    }
+    td {
+        width: 15vw; /* Las celdas se hacen un poco más grandes en pantallas más pequeñas */
+        height: 15vw;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Para pantallas de móviles pequeños */
+    td {
+        width: 20vw; /* Celdas aún más grandes en pantallas muy pequeñas */
+        height: 20vw;
+    }
+
+    .contenedor-tablero {
+        padding: 5px; /* Menos padding para pantallas más pequeñas */
+    }
+    #contenedor-inicial {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    #nombreFormulario {
+        padding: 40px 15px;
+        margin: 60px auto;
+    }
+
+    #dado {
+        font-size: 50px;
+        width: 70px;
+        height: 70px;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    #jugarBtn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #recordActual {
+        width: 100%;
+        font-size: 18px;
+        padding: 10px;
+    }
+}
